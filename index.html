@@ -3,13 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <title>Basic JSON Editor Example</title>
+    <!-- CSS only -->
+    <!-- Latest compiled and minified CSS -->
+
     <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
   </head>
   <body>
-    <h1>Basic JSON Editor Example</h1>
+    <div class="container">
+      <div class="row">
+        <div id="editor_holder"></div>
+        <button id="submit">Submit (console.log)</button>
+      </div>
+    </div>
 
-    <div id="editor_holder"></div>
-    <button id="submit">Submit (console.log)</button>
+    <h1>Basic JSON Editor Example</h1>
 
     <script>
       var starting_value = [
@@ -35,7 +42,7 @@
         },
         startval: starting_value
       });
-
+      //JSONEditor.defaults.options.theme = "bootstrap3";
       // Hook up the submit button to log to the console
       document.getElementById("submit").addEventListener("click", function() {
         // Get the value from the editor
